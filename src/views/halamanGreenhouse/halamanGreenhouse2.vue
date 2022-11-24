@@ -259,7 +259,7 @@ var data_monitor_greenhouse2 = dataMonitorHardwareGreenhouse2();
           <div class="w-11/12 h-divider bg-gray-400" />
         </div>
         <!-----Judul: Tabel (Temperatur & Kelembaban)---------->
-        <div class="flex justify-center mt-1">
+        <div class="hidden justify-center mt-1">
           <div class="flex flex-col">
             <h1
               class="text-xl font-extrabold justify-center flex mt-2 drop-shadow-md tracking-wider"

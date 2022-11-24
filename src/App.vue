@@ -1,5 +1,6 @@
 <script setup>
 import { App as CapacitorApp } from "@capacitor/app";
+import { ref, watch } from "vue";
 //---------------------------------------//
 import { dataKontrolTampilanPengguna } from "./dataStorePusat/dataKontrolTampilanPengguna";
 //---------------------------------------//
@@ -11,7 +12,6 @@ import mqttKoneksi from "@/koneksi/koneksiMqtt.vue";
 import bottomNav from "@/components/bottomNavbar.vue";
 import modalKoneksiDisconnected from "@/views/global/modal/modalKoneksiDisconnected.vue";
 import modalKoneksiLoading from "@/views/global/modal/modalKoneksiLoading.vue";
-import { ref } from "@vue/reactivity";
 //---------------------------------------//
 let tampilan = dataKontrolTampilanPengguna();
 //----------Logic deteksi double tap tombol back delay 500ms-----------------------------//
@@ -28,6 +28,20 @@ CapacitorApp.addListener("backButton", () => {
   }
 });
 //---------------------------------------//
+import { useSwipe } from '@vueuse/core'
+
+const el = ref(null)
+const { isSwiping, direction, lengthX} = useSwipe(el)
+
+
+watch([isSwiping, direction], ([x, y]) => {
+  // do whatever you want
+  console.log(x, y);
+  if (x == true && y == "RIGHT"){
+    tampilan.bukaKontenFullscreen("x");
+  }
+});
+
 </script>
 
 <style scoped>
@@ -40,7 +54,8 @@ CapacitorApp.addListener("backButton", () => {
 </style>
 
 <template>
-  <div class="disable-text-selection">
+  <div class="disable-text-selection" ref="el">
+<!--     <p>touch gesture:{{ direction }}</p> -->
     <mqttKoneksi />
     <modal-koneksi-disconnected v-show="tampilan.tampilan_pengguna === 'disconnected'" />
     <modal-koneksi-loading v-show="tampilan.tampilan_pengguna === 'loading'" />

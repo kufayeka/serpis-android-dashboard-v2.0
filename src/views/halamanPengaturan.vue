@@ -58,7 +58,7 @@ kontrol_tampilan.$subscribe((mutations, state) => {
 <style></style>
 
 <template>
-  <div class="flex flex-col w-full">
+  <div class="flex flex-col w-screen">
     <!-------Panel Judul Halaman-------->
     <div class="bg-green-800 absolute w-full rounded-b-3xl -z-30">
       <img
@@ -75,9 +75,9 @@ kontrol_tampilan.$subscribe((mutations, state) => {
       </p>
     </div>
     <!-------Konten-------->
-    <div class="flex flex-col relative top-7">
+    <div class="flex flex-col relative top-7 ">
       <!-----Panel Info Halaman---------->
-      <div class="border border-white rounded-xl p-1 mx-4">
+      <div class="border border-white rounded-xl p-1 mx-4 ">
         <div class="bg-white shadow-card rounded-xl p-3 flex flex-row space-x-3">
           <div class="bg-white rounded-full flex p-3 h-20 w-32">
             <img
@@ -96,37 +96,37 @@ kontrol_tampilan.$subscribe((mutations, state) => {
     </div>
     <!-----Panel Pengaturan--------->
     <div
-      class="flex justify-center mt-10"
+      class="flex justify-center mt-10 bg-slate-50 rounded-t-lg"
       v-show="kontrol_tampilan.konten_fullscreen == tutup"
     >
-      <div class="flex flex-col h-full mb-32">
+      <div class="flex flex-col h-full w-screen mb-32">
         <!---Pengaturan : Greenhouse 1----------->
-        <div class="grid justify-items-center h-fit mt-3">
+        <div class="grid justify-items-center h-fit w-full mt-3">
           <div
-            class="p-2 bg-green-700 rounded-md shadow-card flex flex-row active:opacity-90 active:scale-95 transition duration-50 ease-in-out"
+            class="p-2 bg-white rounded-md shadow-cardShadow2 flex flex-row active:opacity-90 active:scale-95 transition duration-50 ease-in-out"
             @click.prevent="keHalaman(kontenPengaturanGreenhouse1)"
-          >
-            <div class="flex flex-col mt-3 ml-2 mr-2 mb-3">
-              <h1 class="text-white text-lg font-bold tracking-wider">
+          > 
+            <div class="flex flex-col mt-3 ml-2 mr-2 mb-3 text-black">
+              <h1 class="text-lg font-bold tracking-wider">
                 Sprayer Greenhouse 1
               </h1>
               <div class="flex flex-row text-xs mt-2">
                 <div class="flex flex-col">
-                  <p class="text-white">
+                  <p class="">
                     ON di suhu :
                     {{ kontrol_hardware_greenhouse1.thresholdONPompaSprayer }} &#176; C
                   </p>
-                  <p class="text-white">
+                  <p class="">
                     ON selama :
                     {{ kontrol_hardware_greenhouse1.timerONPompaSprayer }} Mnt
                   </p>
                 </div>
                 <div class="flex flex-col ml-3">
-                  <p class="text-white">
+                  <p class="">
                     OFF di suhu :
                     {{ kontrol_hardware_greenhouse1.thresholdOFFPompaSprayer }} &#176; C
                   </p>
-                  <p class="text-white">
+                  <p class="">
                     OFF selama :
                     {{ kontrol_hardware_greenhouse1.timerOFFPompaSprayer }} Mnt
                   </p>
@@ -138,30 +138,30 @@ kontrol_tampilan.$subscribe((mutations, state) => {
         <!---Pengaturan : Greenhouse 2----------->
         <div class="grid justify-items-center h-fit mt-3">
           <div
-            class="p-2 bg-green-700 rounded-md shadow-card flex flex-row active:opacity-90 active:scale-95 transition duration-50 ease-in-out"
+            class="p-2 bg-white rounded-md shadow-cardShadow2 flex flex-row active:opacity-90 active:scale-95 transition duration-50 ease-in-out"
             @click.prevent="keHalaman(kontenPengaturanGreenhouse2)"
           >
             <div class="flex flex-col mt-3 ml-2 mr-2 mb-3">
-              <h1 class="text-white text-lg font-bold tracking-wider">
+              <h1 class=" text-lg font-bold tracking-wider">
                 Sprayer Greenhouse 2
               </h1>
               <div class="flex flex-row text-xs mt-2">
                 <div class="flex flex-col">
-                  <p class="text-white">
+                  <p class="">
                     ON di suhu :
                     {{ kontrol_hardware_greenhouse2.thresholdONPompaSprayer }} &#176; C
                   </p>
-                  <p class="text-white">
+                  <p class="">
                     ON selama :
                     {{ kontrol_hardware_greenhouse2.timerONPompaSprayer }} Mnt
                   </p>
                 </div>
                 <div class="flex flex-col ml-3">
-                  <p class="text-white">
+                  <p class="">
                     OFF di suhu :
                     {{ kontrol_hardware_greenhouse2.thresholdOFFPompaSprayer }} &#176; C
                   </p>
-                  <p class="text-white">
+                  <p class="">
                     OFF selama :
                     {{ kontrol_hardware_greenhouse2.timerOFFPompaSprayer }} Mnt
                   </p>
@@ -173,30 +173,30 @@ kontrol_tampilan.$subscribe((mutations, state) => {
         <!---Pengaturan : Greenhouse 3----------->
         <div class="grid justify-items-center h-fit mt-3">
           <div
-            class="p-2 bg-green-700 rounded-md shadow-card flex flex-row active:opacity-90 active:scale-95 transition duration-50 ease-in-out"
+            class="p-2 bg-white rounded-md shadow-cardShadow2 flex flex-row active:opacity-90 active:scale-95 transition duration-50 ease-in-out"
             @click.prevent="keHalaman(kontenPengaturanGreenhouse3)"
           >
             <div class="flex flex-col mt-3 ml-2 mr-2 mb-3">
-              <h1 class="text-white text-lg font-bold tracking-wider">
+              <h1 class=" text-lg font-bold tracking-wider">
                 Sprayer Greenhouse 3
               </h1>
               <div class="flex flex-row text-xs mt-2">
                 <div class="flex flex-col">
-                  <p class="text-white">
+                  <p class="">
                     ON di suhu :
                     {{ kontrol_hardware_greenhouse3.thresholdONPompaSprayer }} &#176; C
                   </p>
-                  <p class="text-white">
+                  <p class="">
                     ON selama :
                     {{ kontrol_hardware_greenhouse3.timerONPompaSprayer }} Mnt
                   </p>
                 </div>
                 <div class="flex flex-col ml-3">
-                  <p class="text-white">
+                  <p class="">
                     OFF di suhu :
                     {{ kontrol_hardware_greenhouse3.thresholdOFFPompaSprayer }} &#176; C
                   </p>
-                  <p class="text-white">
+                  <p class="">
                     OFF selama :
                     {{ kontrol_hardware_greenhouse3.timerOFFPompaSprayer }} Mnt
                   </p>
@@ -208,30 +208,30 @@ kontrol_tampilan.$subscribe((mutations, state) => {
         <!---Pengaturan : Media Tanah----------->
         <div class="grid justify-items-center h-fit mt-3">
           <div
-            class="p-2 bg-green-700 rounded-md shadow-card flex flex-row active:opacity-90 active:scale-95 transition duration-50 ease-in-out"
+            class="p-2 bg-white rounded-md shadow-cardShadow2 flex flex-row active:opacity-90 active:scale-95 transition duration-50 ease-in-out"
             @click.prevent="keHalaman(kontenPengaturanGreenhouse3)"
           >
             <div class="flex flex-col mt-3 ml-2 mr-2 mb-3">
-              <h1 class="text-white text-lg font-bold tracking-wider">
+              <h1 class=" text-lg font-bold tracking-wider">
                 Sprayer Media Tanah
               </h1>
               <div class="flex flex-row text-xs mt-2">
                 <div class="flex flex-col">
-                  <p class="text-white">
+                  <p class="">
                     ON di suhu :
                     {{ kontrol_hardware_greenhouse3.thresholdONPompaSprayer }} &#176; C
                   </p>
-                  <p class="text-white">
+                  <p class="">
                     ON selama :
                     {{ kontrol_hardware_greenhouse3.timerONPompaSprayer }} Mnt
                   </p>
                 </div>
                 <div class="flex flex-col ml-3">
-                  <p class="text-white">
+                  <p class="">
                     OFF di suhu :
                     {{ kontrol_hardware_greenhouse3.thresholdOFFPompaSprayer }} &#176; C
                   </p>
-                  <p class="text-white">
+                  <p class="">
                     OFF selama :
                     {{ kontrol_hardware_greenhouse3.timerOFFPompaSprayer }} Mnt
                   </p>

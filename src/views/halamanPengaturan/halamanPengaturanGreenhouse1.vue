@@ -124,7 +124,7 @@ function kirimParameterKeServer() {
             <!----------------->
             <div class="flex justify-center">
               <button
-                class="bg-green-700 py-2 px-4 mt-7 mb-12 text-lg font-bold text-white rounded-md active:opacity-90 active:scale-95 transition duration-50 ease-in-out"
+                class="bg-green-700 hover:bg-green-600 py-2 px-4 mt-7 mb-12 text-lg font-bold text-white rounded-md active:opacity-90 active:scale-95 transition duration-50 ease-in-out"
                 @click.prevent="kirimParameterKeServer()"
               >
                 Simpan

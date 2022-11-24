@@ -27,6 +27,7 @@ function toggleBukaTabMediaTanah() {
   tabOrder.value = 2;
 }
 //---------------------------------------//
+
 </script>
 
 <style></style>
@@ -50,7 +51,7 @@ function toggleBukaTabMediaTanah() {
       </p>
     </div>
     <!------Panel Judul Halaman--------->
-    <div class="flex flex-col relative top-7">
+    <div class="flex flex-col relative top-7" ref="el">
       <div class="border border-white rounded-xl p-1 mx-4">
         <div class="bg-white shadow-card rounded-xl p-3 flex flex-row space-x-3">
           <div class="bg-white rounded-full flex p-3 h-20 w-28">

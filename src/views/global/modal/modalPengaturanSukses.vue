@@ -8,13 +8,13 @@ let data_modal_pengaturan_parameter = dataModalPengaturanParameter();
 function keHalamanPengaturan() {
   setTimeout(function () {
     kontrol_tampilan.konten_fullscreen = "x";
-  }, 500);
+  }, 1000);
 }
 </script>
 
 <template>
   <div class="grid place-items-center h-screen w-full">
-    <div class="bg-white rounded-lg w-10/12 animate-pop-out p-5">
+    <div class="bg-white shadow-cardShadow2 rounded-lg w-10/12 animate-pop-out p-5">
       <div class="grid justify-items-center mb-3">
         <img
           src="../../../assets/icons/icons8-approval-100.png"
@@ -55,7 +55,7 @@ function keHalamanPengaturan() {
       <!-----Back------------>
       <div class="flex justify-center">
         <button
-          class="bg-green-700 py-2 px-7 mt-3 mb-4 text-lg font-bold text-white rounded-md active:scale-95 transition duration-50 ease-in-out"
+          class="bg-green-700 py-2 px-7 mt-3 mb-4 text-lg font-bold text-white hover:bg-green-600 rounded-md active:scale-95 transition duration-50 ease-in-out"
           @click.prevent="keHalamanPengaturan()"
         >
           OK

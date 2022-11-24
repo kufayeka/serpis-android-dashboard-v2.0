@@ -40,20 +40,22 @@ let data_kontrol_tampilan_pengguna = dataKontrolTampilanPengguna();
 //
 let data_modal_pengaturan_parameter = dataModalPengaturanParameter();
 //-----------------------------------------------------------------------------------------------------------//
-const host = "broker.emqx.io";
+const host = "iot-petra2.duckdns.org"
 const port = 8083;
 let client = { connected: false };
-let opt = {
-  keepalive: 60,
-  clean: false, // Reserved session
-  connectTimeout: 2000, // Time out
-  reconnectPeriod: 1000, // Reconnection interval
+const opt = {
+  // Clean session
+  keepalive: 120,
+  // Auth
   clientId: "mqttjs_" + Math.random().toString(16).substr(2, 8), // ClientID
-  username: "user", // Username
-  password: "user", // Password
-};
+  username: "petra_mqtt_broker",
+  password: "1n!_mqttBroker",
+  useSSL: true,
+  connectTimeout: 30 * 1000
+}; 
+
 let { ...options } = opt;
-const connectUrl = `ws://${host}:${port}/mqtt`;
+const connectUrl = `wss://${host}:${port}/mqtt`;
 const topikMqtt = {
   topic: daftar_topik_MQTT.topikMQTTSerpisKeseluruhan,
   qos: 1,
@@ -95,7 +97,6 @@ function buatKoneksi() {
     data_kontrol_tampilan_pengguna.tampilan_pengguna = "disconnected";
   });
 }
-//-----------------------------------------------------------------------------------------------------------//
 //-----------------------------------------------------------------------------------------------------------//
 function subscribeKeTopic() {
   const { topic, qos } = topikMqtt;

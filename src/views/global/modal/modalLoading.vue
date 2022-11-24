@@ -2,7 +2,7 @@
 
 <template>
   <div class="grid place-items-center h-screen w-full">
-    <div class="bg-white rounded-lg h-fit animate-pop-out p-5">
+    <div class="bg-white shadow-cardShadow2 rounded-lg h-fit animate-pop-out p-5">
       <div class="grid justify-items-center mb-5">
         <lottie-animation
           ref="anim"

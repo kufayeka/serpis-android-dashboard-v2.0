@@ -11,7 +11,10 @@ module.exports = {
         boxShadow: {
           'card' : '0px 2px 2px rgba(0,0,0,0.4)',
           'card1' : '0px 0.5px 2px rgba(0,0,0,0.4)',
-          'bottomNav' : '0px -2px 8px rgba(0,0,0,0.3)'
+          'bottomNav' : '0px -2px 8px rgba(0,0,0,0.3)',
+          'cardShadow1':'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
+          'cardShadow2': 'rgba(0, 0, 0, 0.15) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px',
+          'cardShadow3': 'rgba(0, 0, 0, 0.1) 0px 0px 0px 1px'
         },
         borderWidth: {
           'tipis' : '0.7px'

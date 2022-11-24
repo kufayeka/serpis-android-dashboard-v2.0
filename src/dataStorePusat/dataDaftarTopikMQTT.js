@@ -11,8 +11,9 @@ export const dataDaftarTopikMQTT = defineStore({
         /*Monitor*/
         greenhouse1Temperatur: 'serpis/monitor/greenhouse/1/klimat/temperatur',
         greenhouse1Kelembaban: 'serpis/monitor/greenhouse/1/klimat/kelembaban',
-        greenhouse1PompaSprayer: 'serpis/monitor/greenhouse/1/pompa/sprayer',
+        greenhouse1PompaSprayer: 'serpis/kontrol/greenhouse/1/pompa/sprayer',
         greenhouse1TandonSprayer: 'serpis/monitor/greenhouse/1/air/tandon',
+
         greenhouse1AirNutrisiHidroponik1: 'serpis/monitor/greenhouse/1/air/hidroponik/1',
         greenhouse1AirNutrisiHidroponik2: 'serpis/monitor/greenhouse/1/air/hidroponik/2',
         greenhouse1AirNutrisiHidroponik3: 'serpis/monitor/greenhouse/1/air/hidroponik/3',
@@ -26,15 +27,16 @@ export const dataDaftarTopikMQTT = defineStore({
         kontrolGreenhouse1PompaSprayerOffThreshold: 'serpis/kontrol/greenhouse/1/pompa/sprayer/threshold/off',
         kontrolGreenhouse1PompaSprayerOnTimer: 'serpis/kontrol/greenhouse/1/pompa/sprayer/timer/on',
         kontrolGreenhouse1PompaSprayerOffTimer: 'serpis/kontrol/greenhouse/1/pompa/sprayer/timer/off',
-        /*Kontrol*/
+
         databaseGreenhouse1DataKlimatKelembaban: 'serpis/database/test/data',
         databaseGreenhouse1DataKlimatTimestamp: 'serpis/database/test/timestamp',
         //-------------------------------GREENHOUSE 2-------------------------------------------------------//
         /*Monitor*/
         greenhouse2Temperatur: 'serpis/monitor/greenhouse/2/klimat/temperatur',
         greenhouse2Kelembaban: 'serpis/monitor/greenhouse/2/klimat/kelembaban',
-        greenhouse2PompaSprayer: 'serpis/monitor/greenhouse/2/pompa/sprayer',
+        greenhouse2PompaSprayer: 'serpis/kontrol/greenhouse/2/pompa/sprayer',
         greenhouse2TandonSprayer: 'serpis/monitor/greenhouse/2/air/tandon',
+
         greenhouse2AirNutrisiHidroponik1: 'serpis/monitor/greenhouse/2/air/hidroponik/1',
         greenhouse2AirNutrisiHidroponik2: 'serpis/monitor/greenhouse/2/air/hidroponik/2',
         greenhouse2AirNutrisiHidroponik3: 'serpis/monitor/greenhouse/2/air/hidroponik/3',
@@ -50,8 +52,9 @@ export const dataDaftarTopikMQTT = defineStore({
         /*Monitor*/
         greenhouse3Temperatur: 'serpis/monitor/greenhouse/3/klimat/temperatur',
         greenhouse3Kelembaban: 'serpis/monitor/greenhouse/3/klimat/kelembaban',
-        greenhouse3PompaSprayer: 'serpis/monitor/greenhouse/3/pompa/sprayer',
+        greenhouse3PompaSprayer: 'serpis/kontrol/greenhouse/3/pompa/sprayer',
         greenhouse3TandonSprayer: 'serpis/monitor/greenhouse/3/air/tandon',
+
         greenhouse3AirNutrisiHidroponik1: 'serpis/monitor/greenhouse/3/air/hidroponik/1',
         greenhouse3AirNutrisiHidroponik2: 'serpis/monitor/greenhouse/3/air/hidroponik/2',
         greenhouse3AirNutrisiHidroponik3: 'serpis/monitor/greenhouse/3/air/hidroponik/3',
