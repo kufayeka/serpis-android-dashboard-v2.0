@@ -1,0 +1,20 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@font-face {
+    font-family: 'kustom-bold';
+    src: url('./fonts/Nunito_Sans/NunitoSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'kustom-regular';
+    src: url('./fonts/Nunito_Sans/NunitoSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'kustom-thin';
+    src: url('./fonts/Nunito_Sans/NunitoSans-Light.ttf');
+}

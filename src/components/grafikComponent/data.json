@@ -1,0 +1,21 @@
+{
+    "topology": [
+        {
+            "label": "living_street",
+            "value": 0.010549953326361517
+        },
+        {
+            "label": "tertiary",
+            "value": 0.767246375468044
+        },
+        {
+            "label": "primary",
+            "value": 0.21522791175081937
+        },
+        {
+            "label": "service",
+            "value": 0.006975759454774865
+        }
+    ]
+}
+    
