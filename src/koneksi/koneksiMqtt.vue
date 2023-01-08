@@ -40,16 +40,16 @@ let data_kontrol_tampilan_pengguna = dataKontrolTampilanPengguna();
 //
 let data_modal_pengaturan_parameter = dataModalPengaturanParameter();
 //-----------------------------------------------------------------------------------------------------------//
-const host = "iot-petra2.duckdns.org"
-const port = 8083;
+const host = ""
+const port = ;
 let client = { connected: false };
 const opt = {
   // Clean session
   keepalive: 120,
   // Auth
   clientId: "mqttjs_" + Math.random().toString(16).substr(2, 8), // ClientID
-  username: "petra_mqtt_broker",
-  password: "1n!_mqttBroker",
+  username: "",
+  password: "",
   useSSL: true,
   connectTimeout: 30 * 1000
 }; 
